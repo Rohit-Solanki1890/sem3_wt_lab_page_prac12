@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Only Gallery</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        h2 {
+            margin-top: 20px;
+        }
+
+        /* Hide radio buttons */
+        input[type="radio"] {
+            display: none;
+        }
+
+        /* Display area */
+        .display-area {
+            margin: 20px auto;
+            min-height: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .display-area img {
+            max-width: 80%;
+            max-height: 300px;
+            border-radius: 10px;
+            box-shadow: 4px 4px 10px rgba(39, 44, 41, 0.734);
+            display: none;
+            transition: opacity 0.5s ease;
+        }
+
+        #img1:checked~.display-area #gallery1,
+        #img2:checked~.display-area #gallery2,
+        #img3:checked~.display-area #gallery3,
+        #img4:checked~.display-area #gallery4,
+        #img5:checked~.display-area #gallery5,
+        #img6:checked~.display-area #gallery6,
+        #img7:checked~.display-area #gallery7,
+        #img8:checked~.display-area #gallery8 {
+            display: block;
+        }
+
+        /* Gallery links container */
+        .gallery-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+            background: #f9f9f9;
+            margin-top: 20px;
+        }
+
+        .gallery-links label {
+            text-decoration: none;
+            font-weight: bold;
+            color: #000;
+            margin: 10px;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        .gallery-links label:hover {
+            color: #007BFF;
+        }
+
+        @media (max-width: 600px) {
+            .display-area img {
+                max-width: 95%;
+                max-height: 200px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+
+
+    <!-- Radio Buttons -->
+    <input type="radio" name="gallery" id="img1">
+    <input type="radio" name="gallery" id="img2">
+    <input type="radio" name="gallery" id="img3">
+    <input type="radio" name="gallery" id="img4">
+    <input type="radio" name="gallery" id="img5">
+    <input type="radio" name="gallery" id="img6">
+    <input type="radio" name="gallery" id="img7">
+    <input type="radio" name="gallery" id="img8">
+
+    <!-- Display Area -->
+    <div class="display-area">
+        <img id="gallery1" src="https://images.pexels.com/photos/237266/pexels-photo-237266.jpeg" alt="Gallery 1">
+
+        <img id="gallery2" src="https://www.befunky.com/images/wp/wp-2023-11-nature-photography-featured.jpg"alt="Gallery 2">
+       
+        <img id="gallery3" src="https://i0.wp.com/digital-photography-school.com/wp-content/uploads/2019/09/Karthika-Gupta-Compelling-Nature-Photos-1-3.jpg" alt="Gallery 3">
+       
+        <img id="gallery4" src="https://i0.wp.com/digital-photography-school.com/wp-content/uploads/2019/10/Karthika-Gupta-Compelling-Nature-Photos-5.jpg" alt="Gallery 4">
+     
+        <img id="gallery5" src="https://i0.wp.com/digital-photography-school.com/wp-content/uploads/2019/10/Karthika-Gupta-Compelling-Nature-Photos-5-2.jpg" alt="Gallery 5">
+     
+        <img id="gallery6" src="https://images.pexels.com/photos/3408744/pexels-photo-3408744.jpeg" alt="Gallery 6">
+       
+        <img id="gallery7" src="https://images.pexels.com/photos/210186/pexels-photo-210186.jpeg" alt="Gallery 7">
+       
+        <img id="gallery8" src="https://images.pexels.com/photos/33109/fall-autumn-red-season.jpg" alt="Gallery 8">
+    </div>
+
+
+    ,<div >
+        <h2>Responsive Photo Gallery using CSS Only</h2>
+    </div>
+    <div class="gallery-links">
+    <label for="img1">Gallery 1</label>
+    <label for="img2">Gallery 2</label>
+    <label for="img3">Gallery 3</label>
+    <label for="img4">Gallery 4</label>
+    <label for="img5">Gallery 5</label>
+    <label for="img6">Gallery 6</label>
+    <label for="img7">Gallery 7</label>
+    <label for="img8">Gallery 8</label>
+    </div>
+
+</body>
+
+</html>
